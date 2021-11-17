@@ -1,3 +1,4 @@
+function uriError() {
 try {
     throw new URIError('Hello', 'someFile.js', 10)
 } catch (e) {
@@ -8,4 +9,9 @@ try {
     console.log(e.lineNumber)
     console.log(e.columnNumber)
     console.log(e.stack)
+}
+}
+
+module.exports = {
+    uriError,
 }
